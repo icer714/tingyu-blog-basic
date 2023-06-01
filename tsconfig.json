@@ -18,9 +18,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]  // 这里需要配置
+    }
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx"]
 }
